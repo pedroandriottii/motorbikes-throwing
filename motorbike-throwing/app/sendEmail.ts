@@ -4,7 +4,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const sendEmail =  async (formData: FormData) => {
+export const sendEmail = async (formData: FormData) => {
   const nomeCompleto = formData.get('nomeCompleto');
   const cpf = formData.get('cpf');
   const dataNascimento = formData.get('dataNascimento');
@@ -14,8 +14,8 @@ export const sendEmail =  async (formData: FormData) => {
 
   const { data } = await resend.emails.send({
     from: "onboarding@resend.dev",
-    to: "luismingati@gmail.com",
-    subject: "New user",
+    to: "pedroa3357@gmail.com",
+    subject: "Novo cadastro de lead!!",
     text: `New user: ${nomeCompleto} - ${cpf} - ${dataNascimento} - ${telefoneWhatsapp} - ${possuiHabilitacao} - ${comoConquistar}`
   })
   console.log(data);
