@@ -14,7 +14,7 @@ export const sendEmail = async (formData: FormData) => {
 
   const { data } = await resend.emails.send({
     from: "onboarding@resend.dev",
-    to: "pedroa3357@gmail.com",
+    to: "phab@cesar.school",
     subject: "Novo cadastro de lead!!",
     text: `New user: ${nomeCompleto} - ${cpf} - ${dataNascimento} - ${telefoneWhatsapp} - ${possuiHabilitacao} - ${comoConquistar}`
   })
